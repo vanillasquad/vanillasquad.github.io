@@ -65,3 +65,73 @@ nav {
     height: auto;
     margin-top: 25%;
 }
+
+/*---boxes----*/
+
+body {
+   background-color: #FFFECA;
+   font-family: Droid Sans Mono;
+   color: #ada54e;
+}
+
+#container {
+   width: 100%;
+   box-sizing: border-box;
+   padding: 5%;
+}
+
+
+#cone-container {
+   /*border: solid black 2px;*/
+   max-width: 55%;
+   margin: 80px auto 45px;
+}
+
+#tagline h4 {
+  text-align: center;
+}
+
+#splash {
+   /*border: solid 1px red;*/
+}
+
+.cone {
+   box-sizing: border-box;
+   max-width: 20%;
+   padding: 0 1%;
+   position: relative;
+}
+
+.cone-1 {
+   animation: cone-down 2s ease;
+   animation-fill-mode: forwards;
+   animation-delay: 1s;
+}
+
+.cone-2 {
+   animation: cone-up 2s ease;
+   animation-fill-mode: forwards;
+   animation-delay: 1s;
+}
+
+.cone-3 {
+   animation: cone-up 2s ease;
+   animation-fill-mode: forwards;
+   animation-delay: 1s;
+}
+
+.cone-4 {
+   animation: cone-down 2s ease;
+   animation-fill-mode: forwards;
+   animation-delay: 1s;
+}
+
+@keyframes cone-down {
+   0% {transform: translateY(0);}
+   100% {transform: translateY(10px);}
+}
+
+@keyframes cone-up {
+   0% {transform: translateY(0);}
+   100% {transform: translateY(-10px);}
+}
