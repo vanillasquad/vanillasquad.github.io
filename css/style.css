@@ -1,5 +1,5 @@
 /* ------------------
- Resets
+ Resets & body
 ------------------- */
 * {
     padding: 0;
@@ -9,6 +9,13 @@
 *, *:after, *:before {
     box-sizing: border-box;
 }
+
+body {
+   background-color: #FFFECA;
+   font-family: Droid Sans Mono;
+   color: #ada54e;
+}
+
 
 /* ------------------
  Nav
@@ -43,6 +50,7 @@ nav {
     max-height: 140.8px;
 }
 
+
 @media screen and (min-width: 1280px) {
     #logo {
         margin-top: 20px;
@@ -61,6 +69,12 @@ nav {
     float: right;
     margin-right: 30px;
 }
+
+
+
+/* ------------------
+ Splash
+------------------- */
 
 #menu a {
   line-height: 5.5em;
@@ -85,11 +99,6 @@ a:hover {
 
 /*---boxes----*/
 
-body {
-   background-color: #FFFECA;
-   font-family: Droid Sans Mono;
-   color: #ada54e;
-}
 
 #container {
    width: 100%;
@@ -106,10 +115,21 @@ body {
 
 #tagline h4 {
   text-align: center;
+
+  font-size: 3vh;
+  margin-bottom: 10vh;
+}
+
+#tagline p {
+   font-size: 2vh;
+   text-align: center;
+
 }
 
 #splash {
    /*border: solid 1px red;*/
+   padding-top: 20vh;
+   height: 96vh
 }
 
 .cone {
@@ -151,4 +171,12 @@ body {
 @keyframes cone-up {
    0% {transform: translateY(0);}
    100% {transform: translateY(-10px);}
+}
+
+/* ------------------
+ Blog
+------------------- */
+
+.post-title-container * {
+   display: inline-block;
 }
