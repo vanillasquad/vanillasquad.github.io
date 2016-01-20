@@ -2,6 +2,8 @@
 
 body {
    background-color: #FFFECA;
+   font-family: Droid Sans Mono;
+   color: #ada54e;
 }
 
 #container {
@@ -14,6 +16,10 @@ body {
    margin: 0 auto;
 }
 
+#tagline h4 {
+  text-align: center;
+}
+
 .cone {
-   width: 23%;
+   max-width: 20%;
 }
