@@ -16,6 +16,16 @@ body {
    color: #ada54e;
 }
 
+a {
+   text-decoration: none;
+   color: #F00076;
+   transition: color 0.3s ease;
+}
+
+a:hover {
+   color: #FE5049;
+}
+
 
 /* ------------------
  Nav
@@ -70,32 +80,32 @@ nav {
     margin-right: 30px;
 }
 
+#menu a {
+   line-height: 5.5em;
+}
+
+#menu ul li {
+   list-style: none;
+   display: inline;
+   padding-right: 3em;
+}
+
+nav a {
+   text-decoration: none;
+   font-size: 2em;
+   color: #fff;
+   transition: color 0.3s linear;
+}
+
+nav a:hover {
+   color: #ffdb5c;
+}
 
 
 /* ------------------
  Splash
 ------------------- */
 
-#menu a {
-  line-height: 5.5em;
-}
-
-#menu ul li {
-  list-style: none;
-  display: inline;
-  padding-right: 3em;
-}
-
-a {
-  text-decoration: none;
-  font-size: 2em;
-  color: #fff;
-  transition: color 0.3s linear;
-}
-
-a:hover {
-  color: #ffdb5c;
-}
 
 /*---boxes----*/
 
@@ -191,6 +201,24 @@ a:hover {
    display: inline-block;
 }
 
+.contributor .profile-card p {
+   display: block;
+   text-align: center;
+}
+
+.contributor {
+   float: left;
+   margin-bottom: 4em;
+}
+
+.title {
+   float: left;
+}
+
+.post-body-container {
+   clear: both;
+}
+
 
 
 /* ------------------
@@ -222,18 +250,18 @@ a:hover {
     color: #FB504D;
 }
 
-#andrew .profile-img {
+.andrew .profile-img {
     background-image: url('https://avatars0.githubusercontent.com/u/14013616?v=3&s=200');
 }
 
-#katherine .profile-img {
+.katherine .profile-img {
     background-image: url('https://avatars1.githubusercontent.com/u/1287388?v=3&s=200');
 }
 
-#jack .profile-img {
+.jack .profile-img {
     background-image: url('https://avatars2.githubusercontent.com/u/12638261?v=3&s=200');
 }
 
-#elias .profile-img {
+.elias .profile-img {
     background-image: url('https://avatars1.githubusercontent.com/u/12719553?v=3&s=200');
 }
