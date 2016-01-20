@@ -150,3 +150,7 @@ nav {
 /* ------------------
  Blog
 ------------------- */
+
+.post-title-container * {
+   display: inline-block;
+}
