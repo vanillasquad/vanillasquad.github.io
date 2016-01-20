@@ -111,13 +111,13 @@ a:hover {
    /*border: solid black 2px;*/
    max-width: 55%;
    margin: 80px auto 45px;
+   display: table;
 }
 
 #tagline h4 {
   text-align: center;
-
-  font-size: 3vh;
-  margin-bottom: 10vh;
+  font-size: 3vw;
+  margin-bottom: 10vw;
 }
 
 #tagline p {
@@ -134,9 +134,19 @@ a:hover {
 
 .cone {
    box-sizing: border-box;
-   max-width: 20%;
+   max-width: 25%;
    padding: 0 1%;
-   position: relative;
+   display: block;
+   float: left;
+}
+
+#cone-container:before {
+   content: '';
+   display: table;
+}
+
+#cone-container:after {
+   clear: both;
 }
 
 .cone-1 {
@@ -165,12 +175,12 @@ a:hover {
 
 @keyframes cone-down {
    0% {transform: translateY(0);}
-   100% {transform: translateY(10px);}
+   100% {transform: translateY(15px);}
 }
 
 @keyframes cone-up {
    0% {transform: translateY(0);}
-   100% {transform: translateY(-10px);}
+   100% {transform: translateY(-15px);}
 }
 
 /* ------------------
