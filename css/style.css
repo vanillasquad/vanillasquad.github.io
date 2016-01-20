@@ -1,3 +1,71 @@
+/* ------------------
+ Resets
+------------------- */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+/* ------------------
+ Nav
+------------------- */
+.nav-content {
+    max-width: 1280px;
+    margin: auto;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    background-color: #FB504D;
+    height: auto;
+}
+
+#logo {
+    float: left;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#logo img {
+    width: 7vw;
+    height: auto;
+    min-width: 60px;
+    min-height: 105.6px;
+    max-width: 80px;
+    max-height: 140.8px;
+}
+
+@media screen and (min-width: 768px) {
+    #logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #logo img {
+        width: 7vw;
+        height: auto;
+        max-width: 40px;
+        max-height: 140.8px;
+    }
+}
+
+#menu {
+    float: right;
+    margin-right: 30px;
+}
+
+#menu object {
+    width: 100px;
+    height: auto;
+    margin-top: 25%;
+}
+
 /*---boxes----*/
 
 body {
@@ -21,10 +89,13 @@ body {
 
 #tagline h4 {
   text-align: center;
+  font-size: 3vw;
+  margin-bottom: 10vh;
 }
 
 #splash {
    /*border: solid 1px red;*/
+   margin: 200px 0 50px;
 }
 
 .cone {
