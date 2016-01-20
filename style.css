@@ -1,0 +1,19 @@
+/*---boxes----*/
+
+body {
+   background-color: #FFFECA;
+}
+
+#container {
+   width: 100%;
+}
+
+
+#cone-container {
+   max-width: 50%;
+   margin: 0 auto;
+}
+
+.cone {
+   width: 23%;
+}
