@@ -234,6 +234,13 @@ nav a:hover {
     margin: 20px 0;
 }
 
+.small {
+   width: 100px;
+   height: 100px;
+   background-size: contain;
+   margin: 25px;
+}
+
 .profile-body-container {
     margin-left: 16em;
 }
