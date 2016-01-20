@@ -4,19 +4,26 @@
         <meta charset="utf-8">
         <title>The Vanilla Squad Blog</title>
         <link rel="stylesheet" href="./css/style.css" media="screen" charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
     </head>
     <body>
         <nav>
             <div class="nav-content">
                 <div id="logo">
-                    <img src="./img/cone-1.png"/>
+                    <a href="#splash"><img src="./img/cone-1.png"/></a>
                 </div>
                 <div id="menu">
-                    <object type="image/svg+xml" data="./img/hamburger-menu.svg"></object>
+                    <ul>
+                      <li><a href="#blog-container">Blog</a></li>
+                      <li><a href="#profile-container">Profiles</a></li>
+                    </ul>
+
                 </div>
             </div>
         </nav>
         <div id="container">
+
         <div id="splash">
             <div id="cone-container">
                 <img class='cone cone-1' src="img/cone-1.png" alt="" />
@@ -40,60 +47,76 @@
                     <h2>Title</h2>
                     <p class="post-date">20/01/2016</p>
                 </div>
-                <div class="post-body-container">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <a href="#">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </a>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-            </article>
-
-            <article class="card blog-card">
-                <div class="post-title-container">
-                    <img src="#"/>
-                    <h2>Title</h2>
-                    <p class="post-date">20/01/2016</p>
-                </div>
-                <div class="post-body-container">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <a href="#">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </a>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-            </article>
-        </div>
-
-        <div id="profile-container">
-            <div class="card profile-card">
-                <img src=""/>
-                <div class="profile-body-container">
-                    <h2>Name</h2>
-                    <div class="">
-
-                    </div>
-                    <div class="social-icons">
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-github"></i>
-                        <i class="fa fa-linkedin"></i>
-                        <i class="fa fa-codewars"></i>
-                    </div>
+                <div id="tagline">
+                   <h4>Welcome to Vanilla Squid's blog.</h4>
+                   <p>
+                      We are four intrepid JavaScript Programmers enrolled in Founders And Coders
+                   </p>
                 </div>
             </div>
 
-            <div class="card profile-card">
-                <img src=""/>
-                <div class="profile-body-container">
-                    <h2>Name</h2>
-                    <div class="">
-
+            <div id="blog-container">
+                <article class="card blog-card">
+                    <div class="post-title-container">
+                        <img src="#"/>
+                        <h2>Title</h2>
+                        <p class="post-date">20/01/2016</p>
                     </div>
-                    <div class="social-icons">
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-github"></i>
-                        <i class="fa fa-linkedin"></i>
-                        <i class="fa fa-codewars"></i>
+                    <div class="post-body-container">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <a href="#">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </a>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </article>
+
+                <article class="card blog-card">
+                    <div class="post-title-container">
+                        <img src="#"/>
+                        <h2>Title</h2>
+                        <p class="post-date">20/01/2016</p>
+                    </div>
+                    <div class="post-body-container">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <a href="#">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </a>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </article>
+            </div>
+
+            <div id="profile-container">
+                <div class="card profile-card">
+                    <img src=""/>
+                    <div class="profile-body-container">
+                        <h2>Name</h2>
+                        <div class="">
+
+                        </div>
+                        <div class="social-icons">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-github"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-codewars"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card profile-card">
+                    <img src=""/>
+                    <div class="profile-body-container">
+                        <h2>Name</h2>
+                        <div class="">
+
+                        </div>
+                        <div class="social-icons">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-github"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-codewars"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,5 +124,6 @@
         <footer>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </footer>
+        <script src="./js/script.js"></script>
     </body>
 </html>
