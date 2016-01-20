@@ -23,6 +23,8 @@ nav {
     position: fixed;
     background-color: #FB504D;
     height: auto;
+    z-index: 999;
+    box-shadow: 0px -2px 5px 2px #999;
 }
 
 #logo {
@@ -41,7 +43,7 @@ nav {
     max-height: 140.8px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
     #logo {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -60,10 +62,25 @@ nav {
     margin-right: 30px;
 }
 
-#menu object {
-    width: 100px;
-    height: auto;
-    margin-top: 25%;
+#menu a {
+  line-height: 5.5em;
+}
+
+#menu ul li {
+  list-style: none;
+  display: inline;
+  padding-right: 3em;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2em;
+  color: #fff;
+  transition: color 0.3s linear;
+}
+
+a:hover {
+  color: #ffdb5c;
 }
 
 /*---boxes----*/
