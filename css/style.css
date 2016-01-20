@@ -180,3 +180,50 @@ a:hover {
 .post-title-container * {
    display: inline-block;
 }
+
+
+
+/* ------------------
+ Profile
+------------------- */
+.profile-img {
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    float: left;
+    background-repeat: no-repeat;
+    margin: 20px 0;
+}
+
+.profile-body-container {
+    margin-left: 16em;
+}
+
+.profile-body-container h2 {
+    margin-top: 5em;
+}
+
+.profile-card {
+    clear: both;
+}
+
+.social-icons {
+    color: #FB504D;
+}
+
+#andrew .profile-img {
+    background-image: url('https://avatars0.githubusercontent.com/u/14013616?v=3&s=200');
+}
+
+#katherine .profile-img {
+    background-image: url('https://avatars1.githubusercontent.com/u/1287388?v=3&s=200');
+}
+
+#jack .profile-img {
+    background-image: url('https://avatars2.githubusercontent.com/u/12638261?v=3&s=200');
+}
+
+#elias .profile-img {
+    background-image: url('https://avatars1.githubusercontent.com/u/12719553?v=3&s=200');
+}
