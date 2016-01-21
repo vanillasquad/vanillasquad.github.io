@@ -99,6 +99,7 @@ nav a {
    font-size: 2em;
    color: #fff;
    transition: color 0.3s linear;
+   cursor: pointer; cursor: hand;
 }
 
 nav a:hover {
@@ -287,6 +288,19 @@ article {
 
 .transparent {
     opacity: 0;
+}
+
+/* Section Separation*/
+
+#page-divider {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#page-divider img.divider-cone {
+  display: inline-block;
+  margin: 0px auto;
+  width: 2em;
 }
 
 /* ------------------
