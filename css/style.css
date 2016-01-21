@@ -197,8 +197,8 @@ nav a:hover {
  Blog
 ------------------- */
 
-.post-title-container * {
-   display: inline-block;
+.title * {
+   display: block;
 }
 
 .contributor .profile-card p {
@@ -213,13 +213,22 @@ nav a:hover {
 
 .title {
    float: left;
-   margin-top: 5em;
 }
 
 .post-body-container {
    clear: both;
+   position: relative;
+   height: 200px;
+   overflow: hidden;
 }
 
+.overlay {
+   background: linear-gradient(180deg, rgba(255, 254, 202, 0), rgba(255, 254, 202, 0) 60%, rgba(255, 254, 202, 1) 100%);
+   position: absolute;
+   bottom: 0;
+   height: 100%;
+   width: 100%;
+}
 
 
 /* ------------------
@@ -239,7 +248,7 @@ nav a:hover {
    width: 75px;
    height: 75px;
    background-size: contain;
-   margin: 25px;
+   margin: 0 20px 30px 0;
 }
 
 .profile-body-container {
