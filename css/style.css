@@ -262,6 +262,7 @@ article {
 
 .btn {
     width: 45%;
+    height: 80px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -272,6 +273,11 @@ article {
     border: 2px solid #FB504D;
     border-radius: 12px;
     transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+.btn p {
+  margin-top: 14px;
+  font-size: 1.5em;
 }
 
 .btn:hover {
@@ -350,6 +356,18 @@ article {
 
 .social-icons img:hover {
     opacity: 0.5;
+}
+
+@media (max-device-width: 767px) {
+    .social-icons img {
+        width: 100px;
+        margin-right: 33px;
+    }
+
+    .codewars {
+        height: 95px;
+        width: 95px !important;
+    }
 }
 
 .andrew .profile-img {
