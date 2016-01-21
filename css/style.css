@@ -14,6 +14,7 @@ body {
    background-color: #FFFECA;
    font-family: Droid Sans Mono;
    color:  #826514;
+   font-size: 16px;
 }
 
 a {
@@ -26,9 +27,10 @@ a:hover {
    color: #FE5049;
 }
 
-p {
-   line-height: 1.4;
-}
+/*.profile-body-container p,
+.post-body-container p {
+   font-size: 1.4em;
+}*/
 
 
 /* ------------------
@@ -49,19 +51,14 @@ nav {
 }
 
 #logo {
-    float: left;
-    margin-left: 40px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+   float: left;
+   margin-left: 40px;
+   width: 2rem;
+   margin: 15px 35px;
 }
 
 #logo img {
-    width: 7vw;
-    height: auto;
-    min-width: 60px;
-    min-height: 105.6px;
-    max-width: 80px;
-    max-height: 140.8px;
+    width: 100%;
 }
 
 
@@ -85,13 +82,16 @@ nav {
 }
 
 #menu a {
-   line-height: 5.5em;
+   display: table-cell;
+   vertical-align: middle;
 }
 
 #menu ul li {
    list-style: none;
-   display: inline;
+   display: inline-table;
    padding-right: 3em;
+   vertical-align: middle;
+   height: 100px;
 }
 
 nav a {
@@ -103,6 +103,18 @@ nav a {
 
 nav a:hover {
    color: #ffdb5c;
+}
+
+@media (max-device-width: 600px) {
+   #logo {
+      float: left;
+      margin-left: 40px;
+      width: 5rem;
+      margin: 15px 35px;
+   }
+   #menu ul li {
+      height: 180px;
+   }
 }
 
 
