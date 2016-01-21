@@ -268,9 +268,10 @@ nav a:hover {
 }
 
 .codewars {
-   height: 63px;
+   height: 61px;
    width: 63px;
    border-radius: 63px;
+   margin-bottom: 1px;
 }
 
 .andrew .profile-img {
