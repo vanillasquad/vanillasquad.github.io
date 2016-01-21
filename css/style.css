@@ -244,7 +244,7 @@ article {
    position: relative;
    max-height: 100px;
    overflow: hidden;
-   transition: max-height 0.5s ease-in;
+   transition: max-height 0.5s ease;
 }
 
 .overlay {
@@ -254,7 +254,7 @@ article {
    height: 100%;
    width: 100%;
    opacity: 1;
-   transition: opacity 0.5s ease-in;
+   transition: opacity 0.5s ease;
 }
 
 .btn {
