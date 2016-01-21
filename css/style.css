@@ -27,10 +27,11 @@ a:hover {
    color: #FE5049;
 }
 
-/*.profile-body-container p,
-.post-body-container p {
-   font-size: 1.4em;
-}*/
+@media (max-device-width: 763px) {
+   p {
+      font-size: 15px;
+   }
+}
 
 
 /* ------------------
@@ -124,18 +125,17 @@ nav a:hover {
 ------------------- */
 
 
-/*---boxes----*/
-
-
 #container {
    width: 100%;
    box-sizing: border-box;
    padding: 5%;
 }
 
+#splash {
+   padding-top: 6em;
+}
 
 #cone-container {
-   /*border: solid black 2px;*/
    max-width: 55%;
    margin: 80px auto 45px;
    display: table;
@@ -144,7 +144,7 @@ nav a:hover {
 #tagline h4 {
   text-align: center;
   font-size: 3vw;
-  margin-bottom: 10vw;
+  margin-bottom: 3em;
 }
 
 #tagline p {
@@ -153,11 +153,6 @@ nav a:hover {
 
 }
 
-#splash {
-   /*border: solid 1px red;*/
-   padding-top: 20vh;
-   height: 96vh
-}
 
 .cone {
    box-sizing: border-box;
@@ -210,6 +205,13 @@ nav a:hover {
    100% {transform: translateY(-15px);}
 }
 
+@media (max-device-width: 600px) {
+   #splash {
+      margin-top: 13em;
+   }
+}
+
+
 /* ------------------
  Blog
 ------------------- */
@@ -238,7 +240,6 @@ article {
 
 .title {
    float: left;
-   font-size: 1.7rem;
 }
 
 .post-body-container {
@@ -247,10 +248,6 @@ article {
    max-height: 100px;
    overflow: hidden;
    transition: max-height 0.5s ease;
-}
-
-.post-body-container p {
-    font-size: 2.1rem;
 }
 
 .overlay {
@@ -265,6 +262,7 @@ article {
 
 .btn {
     width: 45%;
+    height: 80px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -275,6 +273,11 @@ article {
     border: 2px solid #FB504D;
     border-radius: 12px;
     transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+.btn p {
+  margin-top: 14px;
+  font-size: 1.5em;
 }
 
 .btn:hover {
@@ -306,10 +309,6 @@ article {
 /* ------------------
  Profile
 ------------------- */
-#profile-container {
-    margin-bottom: 50px;
-}
-
 .profile-img {
     content: '';
     height: 200px;
@@ -335,10 +334,6 @@ article {
     margin-top: 5em;
 }
 
-.profile-body-container p {
-    font-size: 0.8rem;
-}
-
 .profile-card {
     clear: both;
 }
@@ -346,6 +341,7 @@ article {
 .social-icons {
     color: #FB504D;
 }
+
 
 .codewars {
    height: 61px;
@@ -360,6 +356,18 @@ article {
 
 .social-icons img:hover {
     opacity: 0.5;
+}
+
+@media (max-device-width: 767px) {
+    .social-icons img {
+        width: 100px;
+        margin-right: 33px;
+    }
+
+    .codewars {
+        height: 95px;
+        width: 95px !important;
+    }
 }
 
 .andrew .profile-img {
