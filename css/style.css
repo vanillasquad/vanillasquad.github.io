@@ -13,7 +13,7 @@
 body {
    background-color: #FFFECA;
    font-family: Droid Sans Mono;
-   color: #ada54e;
+   color:  #826514;
 }
 
 a {
@@ -217,6 +217,7 @@ article {
 
 .title {
    float: left;
+   font-size: xx-large;
 }
 
 .post-body-container {
@@ -224,6 +225,7 @@ article {
    position: relative;
    max-height: 100px;
    overflow: hidden;
+   font-size: xx-large;
    transition: max-height 0.5s ease-in;
 }
 
