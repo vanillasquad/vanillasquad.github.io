@@ -371,7 +371,7 @@ article {
 @media (max-device-width: 767px) {
     .social-icons img {
         width: 100px;
-        margin-right: 40px;
+        margin-right: 33px;
     }
 
     .codewars {
