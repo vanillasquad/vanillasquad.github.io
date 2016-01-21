@@ -12,9 +12,17 @@ for (var ii=0, len=buttons.length; ii<len; ii++) {
 
 /*following
 http://web.archive.org/web/20140213105950/http://itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
+Allows for smooth scrolling when clicking links to move down the page
 */
+
 function currentYPosition() {
-  if(self.pageYOffset) return self.pageYOffset;
+  // Firefox, Chrome, Opera, Safari
+  if (self.pageYOffset) return self.pageYOffset;
+  // Internet Explorer 6 - standards mode
+  if (document.documentElement && document.documentElement.scrollTop)
+      return document.documentElement.scrollTop;
+  // Internet Explorer 6, 7 and 8
+  if (document.body.scrollTop) return document.body.scrollTop;
   return 0;
 }
 
