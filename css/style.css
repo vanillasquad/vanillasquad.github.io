@@ -27,9 +27,14 @@ a:hover {
    color: #FE5049;
 }
 
+p {
+   line-height: 1.4;
+}
+
 @media (max-device-width: 763px) {
    p {
       font-size: 15px;
+      line-height: 1.5;
    }
 }
 
@@ -54,27 +59,12 @@ nav {
 #logo {
    float: left;
    margin-left: 40px;
-   width: 2rem;
+   width: 4em;
    margin: 15px 35px;
 }
 
 #logo img {
     width: 100%;
-}
-
-
-@media screen and (min-width: 1280px) {
-    #logo {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    #logo img {
-        width: 7vw;
-        height: auto;
-        max-width: 40px;
-        max-height: 140.8px;
-    }
 }
 
 #menu {
@@ -92,7 +82,7 @@ nav {
    display: inline-table;
    padding-right: 3em;
    vertical-align: middle;
-   height: 100px;
+   height: 160px;
 }
 
 nav a {
@@ -116,6 +106,19 @@ nav a:hover {
    }
    #menu ul li {
       height: 180px;
+   }
+}
+
+@media (max-device-width: 450px) {
+   #logo {
+      width: 3em;
+   }
+   nav a {
+      font-size: 1em;
+   }
+   #menu ul li {
+      padding-right: 2.5em;
+      height: 110px;
    }
 }
 
@@ -207,7 +210,14 @@ nav a:hover {
 
 @media (max-device-width: 600px) {
    #splash {
-      margin-top: 13em;
+      margin-top: 0em;
+   }
+   #tagline h4 {
+      font-size: 1em;
+      margin-bottom: 3em;
+   }
+   #tagline p {
+      font-size: 1em;
    }
 }
 
@@ -306,6 +316,23 @@ article {
   width: 2em;
 }
 
+@media (max-device-width: 450px) {
+   #blog-container {
+      margin-top: 3em;
+   }
+   .title {
+      margin-bottom: 2em;
+   }
+   .btn {
+      height: 65px;
+      width: 55%;
+   }
+   .btn p {
+      margin-top: 11px;
+      font-size: 1em;
+   }
+}
+
 /* ------------------
  Profile
 ------------------- */
@@ -358,18 +385,6 @@ article {
     opacity: 0.5;
 }
 
-@media (max-device-width: 767px) {
-    .social-icons img {
-        width: 100px;
-        margin-right: 33px;
-    }
-
-    .codewars {
-        height: 95px;
-        width: 95px !important;
-    }
-}
-
 .andrew .profile-img {
     background-image: url('https://avatars0.githubusercontent.com/u/14013616?v=3&s=200');
 }
@@ -384,6 +399,27 @@ article {
 
 .elias .profile-img {
     background-image: url('https://avatars1.githubusercontent.com/u/12719553?v=3&s=200');
+}
+
+@media (max-device-width: 450px) {
+   .profile-body-container {
+      margin-left: 0;
+   }
+   .social-icons img {
+      width: 40px;
+      margin-right: 0;
+   }
+
+   .codewars {
+      height: 38px;
+      width: 38px!important;
+   }
+   .profile-img {
+      height: 100px;
+      width: 100px;
+      margin: 20px 20px 20px 0;
+      background-size: contain;
+   }
 }
 
 /* ------------------
