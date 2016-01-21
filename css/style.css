@@ -13,7 +13,7 @@
 body {
    background-color: #FFFECA;
    font-family: Droid Sans Mono;
-   color: #ada54e;
+   color:  #826514;
 }
 
 a {
@@ -213,6 +213,7 @@ nav a:hover {
 
 .title {
    float: left;
+   font-size: xx-large;
 }
 
 .post-body-container {
@@ -220,6 +221,7 @@ nav a:hover {
    position: relative;
    height: 200px;
    overflow: hidden;
+   font-size: xx-large;
 }
 
 .overlay {
