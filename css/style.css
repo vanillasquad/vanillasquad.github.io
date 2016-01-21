@@ -99,6 +99,7 @@ nav a {
    font-size: 2em;
    color: #fff;
    transition: color 0.3s linear;
+   cursor: pointer; cursor: hand;
 }
 
 nav a:hover {
@@ -237,6 +238,7 @@ article {
 
 .title {
    float: left;
+   font-size: 1.7rem;
 }
 
 .post-body-container {
@@ -245,6 +247,10 @@ article {
    max-height: 100px;
    overflow: hidden;
    transition: max-height 0.5s ease;
+}
+
+.post-body-container p {
+    font-size: 2.1rem;
 }
 
 .overlay {
@@ -284,9 +290,26 @@ article {
     opacity: 0;
 }
 
+/* Section Separation*/
+
+#page-divider {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#page-divider img.divider-cone {
+  display: inline-block;
+  margin: 0px auto;
+  width: 2em;
+}
+
 /* ------------------
  Profile
 ------------------- */
+#profile-container {
+    margin-bottom: 50px;
+}
+
 .profile-img {
     content: '';
     height: 200px;
@@ -312,6 +335,10 @@ article {
     margin-top: 5em;
 }
 
+.profile-body-container p {
+    font-size: 0.8rem;
+}
+
 .profile-card {
     clear: both;
 }
@@ -319,7 +346,6 @@ article {
 .social-icons {
     color: #FB504D;
 }
-
 
 .codewars {
    height: 61px;
@@ -350,4 +376,25 @@ article {
 
 .elias .profile-img {
     background-image: url('https://avatars1.githubusercontent.com/u/12719553?v=3&s=200');
+}
+
+/* ------------------
+ Footer
+------------------- */
+footer {
+    background-color: #FB504D;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer a:hover {
+    color: #ffdb5c;
 }
