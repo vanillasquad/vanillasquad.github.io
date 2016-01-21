@@ -4,13 +4,14 @@ for (var ii=0, len=buttons.length; ii<len; ii++) {
     buttons[ii].addEventListener('click', function() {
         this.previousElementSibling.classList.toggle('expand');
         this.previousElementSibling.getElementsByClassName('overlay')[0].classList.toggle('transparent');
-        this.innerHTML = (this.innerHTML === 'See More ...') ? 'Collapse Post' : 'See More ...';
+        this.firstElementChild.innerHTML = (this.firstElementChild.innerHTML === 'See More ...') ? 'Collapse Post' : 'See More ...';
     });
 }
 
 
 
-/*following
+/*
+following
 http://web.archive.org/web/20140213105950/http://itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
 Allows for smooth scrolling when clicking links to move down the page
 */
