@@ -54,27 +54,12 @@ nav {
 #logo {
    float: left;
    margin-left: 40px;
-   width: 2rem;
+   width: 4em;
    margin: 15px 35px;
 }
 
 #logo img {
     width: 100%;
-}
-
-
-@media screen and (min-width: 1280px) {
-    #logo {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    #logo img {
-        width: 7vw;
-        height: auto;
-        max-width: 40px;
-        max-height: 140.8px;
-    }
 }
 
 #menu {
@@ -92,7 +77,7 @@ nav {
    display: inline-table;
    padding-right: 3em;
    vertical-align: middle;
-   height: 100px;
+   height: 160px;
 }
 
 nav a {
@@ -116,6 +101,19 @@ nav a:hover {
    }
    #menu ul li {
       height: 180px;
+   }
+}
+
+@media (max-device-width: 450px) {
+   #logo {
+      width: 3em;
+   }
+   nav a {
+      font-size: 1em;
+   }
+   #menu ul li {
+      padding-right: 2.5em;
+      height: 110px;
    }
 }
 
@@ -207,7 +205,14 @@ nav a:hover {
 
 @media (max-device-width: 600px) {
    #splash {
-      margin-top: 13em;
+      margin-top: 0em;
+   }
+   #tagline h4 {
+      font-size: 1em;
+      margin-bottom: 3em;
+   }
+   #tagline p {
+      font-size: 1em;
    }
 }
 
@@ -304,6 +309,20 @@ article {
   display: inline-block;
   margin: 0px auto;
   width: 2em;
+}
+
+@media (max-device-width: 450px) {
+   #blog-container {
+      margin-top: 3em;
+   }
+   .btn {
+      height: 65px;
+      width: 55%;
+   }
+   .btn p {
+      margin-top: 11px;
+      font-size: 1em;
+   }
 }
 
 /* ------------------
