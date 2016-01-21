@@ -16,6 +16,16 @@ body {
    color: #ada54e;
 }
 
+a {
+   text-decoration: none;
+   color: #F00076;
+   transition: color 0.3s ease;
+}
+
+a:hover {
+   color: #FE5049;
+}
+
 
 /* ------------------
  Nav
@@ -70,32 +80,32 @@ nav {
     margin-right: 30px;
 }
 
+#menu a {
+   line-height: 5.5em;
+}
+
+#menu ul li {
+   list-style: none;
+   display: inline;
+   padding-right: 3em;
+}
+
+nav a {
+   text-decoration: none;
+   font-size: 2em;
+   color: #fff;
+   transition: color 0.3s linear;
+}
+
+nav a:hover {
+   color: #ffdb5c;
+}
 
 
 /* ------------------
  Splash
 ------------------- */
 
-#menu a {
-  line-height: 5.5em;
-}
-
-#menu ul li {
-  list-style: none;
-  display: inline;
-  padding-right: 3em;
-}
-
-a {
-  text-decoration: none;
-  font-size: 2em;
-  color: #fff;
-  transition: color 0.3s linear;
-}
-
-a:hover {
-  color: #ffdb5c;
-}
 
 /*---boxes----*/
 
@@ -187,10 +197,57 @@ a:hover {
  Blog
 ------------------- */
 
-.post-title-container * {
-   display: inline-block;
+.title * {
+   display: block;
 }
 
+.contributor .profile-card p {
+   display: block;
+   text-align: center;
+}
+
+.contributor {
+   float: left;
+   /*margin-bottom: 4em;*/
+}
+
+.title {
+   float: left;
+}
+
+.post-body-container {
+   clear: both;
+   position: relative;
+   height: 200px;
+   overflow: hidden;
+}
+
+.overlay {
+   background: linear-gradient(180deg, rgba(255, 254, 202, 0), rgba(255, 254, 202, 0) 60%, rgba(255, 254, 202, 1) 100%);
+   position: absolute;
+   bottom: 0;
+   height: 100%;
+   width: 100%;
+}
+
+.btn {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #FB504D;
+    color: #fff;
+    border: 2px solid #FB504D;
+    border-radius: 12px;
+    opacity: 0.8;
+    transition: color 0.5s linear, opacity 0.5s linear;
+}
+
+.btn:hover {
+    opacity: 1;
+}
 
 
 /* ------------------
@@ -204,6 +261,13 @@ a:hover {
     float: left;
     background-repeat: no-repeat;
     margin: 20px 0;
+}
+
+.small {
+   width: 75px;
+   height: 75px;
+   background-size: contain;
+   margin: 0 20px 30px 0;
 }
 
 .profile-body-container {
@@ -230,18 +294,18 @@ a:hover {
     opacity: 0.5;
 }
 
-#andrew .profile-img {
+.andrew .profile-img {
     background-image: url('https://avatars0.githubusercontent.com/u/14013616?v=3&s=200');
 }
 
-#katherine .profile-img {
+.katherine .profile-img {
     background-image: url('https://avatars1.githubusercontent.com/u/1287388?v=3&s=200');
 }
 
-#jack .profile-img {
+.jack .profile-img {
     background-image: url('https://avatars2.githubusercontent.com/u/12638261?v=3&s=200');
 }
 
-#elias .profile-img {
+.elias .profile-img {
     background-image: url('https://avatars1.githubusercontent.com/u/12719553?v=3&s=200');
 }
