@@ -286,6 +286,14 @@ nav a:hover {
     color: #FB504D;
 }
 
+
+.codewars {
+   height: 61px;
+   width: 63px;
+   border-radius: 63px;
+   margin-bottom: 1px;
+}
+
 .social-icons img {
     transition: opacity 0.2s linear;
 }
