@@ -230,6 +230,26 @@ nav a:hover {
    width: 100%;
 }
 
+.btn {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #FB504D;
+    color: #fff;
+    border: 2px solid #FB504D;
+    border-radius: 12px;
+    opacity: 0.8;
+    transition: color 0.5s linear, opacity 0.5s linear;
+}
+
+.btn:hover {
+    color: #ADA647;
+    opacity: 1;
+}
+
 
 /* ------------------
  Profile
