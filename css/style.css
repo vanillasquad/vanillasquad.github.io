@@ -313,7 +313,20 @@ article {
 #page-divider img.divider-cone {
   display: inline-block;
   margin: 0px auto;
-  width: 2em;
+  width: 2.5em;
+  transition: 0.3s ease;
+}
+
+.divider-cone-1:hover {
+   transform: translateY(-12px);
+}
+
+.divider-cone-2:hover {
+   transform: translateY(-12px);
+}
+
+.divider-cone-3:hover {
+   transform: translateY(-12px);
 }
 
 @media (max-device-width: 450px) {
@@ -442,3 +455,9 @@ footer a {
 footer a:hover {
     color: #ffdb5c;
 }
+
+.footer-cone {
+   display: inline-block;
+   /*float: left;*/
+   width: 2.5em;
+   margin: 10px;
