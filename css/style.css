@@ -246,7 +246,6 @@ nav a:hover {
 }
 
 .btn:hover {
-    color: #ADA647;
     opacity: 1;
 }
 
@@ -285,6 +284,14 @@ nav a:hover {
 
 .social-icons {
     color: #FB504D;
+}
+
+.social-icons img {
+    transition: opacity 0.2s linear;
+}
+
+.social-icons img:hover {
+    opacity: 0.5;
 }
 
 .andrew .profile-img {
