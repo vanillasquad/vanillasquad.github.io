@@ -86,5 +86,5 @@ navLinks[1].addEventListener('click', function() {
 });
 
 
-var katherine = document.querySelectorAll('.katherine');
+var katherine = document.querySelectorAll('.katherine-link');
 console.log(katherine);
