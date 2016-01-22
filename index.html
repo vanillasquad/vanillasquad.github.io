@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>The Vanilla Squad Blog</title>
-        <link rel="stylesheet" href="./css/style.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="./css/style.css" media="screen">
         <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,12 +12,12 @@
         <nav>
             <div class="nav-content">
                 <div id="logo">
-                    <a onclick="smoothScroll('splash')"><img src="./img/cone-1.png" alt="pink-cone"/></a>
+                    <a><img src="./img/cone-1.png" alt="pink-cone"/></a>
                 </div>
                 <div id="menu">
                     <ul>
-                        <li><a onclick="smoothScroll('blog-container')">Blog</a></li>
-                        <li><a onclick="smoothScroll('profile-container')">Profiles</a></li>
+                      <li><a>Blog</a></li>
+                      <li><a>Profiles</a></li>
                     </ul>
 
                 </div>
@@ -44,15 +44,15 @@
                 <article>
 
                     <div class="post-title-container">
-                        <div class="katherine">
-                            <div class="profile-img small"></div>
-                        </div>
+                       <div class="katherine katherine-link">
+                          <div class="profile-img small"></div>
+                       </div>
 
-                        <div class="title">
-                            <h2>An Introduction to JavaScript</h2>
-                            <p><a href="#katherine">Katherine Bowler</a></p>
-                            <p class="post-date">20/01/2016</p>
-                        </div>
+                       <div class="title">
+                          <h2>An Introduction to JavaScript</h2>
+                          <p><a class='katherine-link' href="#katherine">Katherine Bowler</a></p>
+                          <p class="post-date">20/01/2016</p>
+                       </div>
                     </div>
 
                     <div class="post-body-container">
@@ -69,15 +69,15 @@
                 <article>
 
                     <div class="post-title-container">
-                        <div class="jack">
-                            <div class="profile-img small"></div>
-                        </div>
+                          <div class="jack jack-link">
+                             <div class="profile-img small"></div>
+                          </div>
 
-                        <div class="title">
-                            <h2>Space Elevators</h2>
-                            <p><a href="#jack">Jack Murphy</a></p>
-                            <p class="post-date">20/01/2016</p>
-                        </div>
+                       <div class="title">
+                          <h2>Space Elevators</h2>
+                          <p><a class='jack-link' href="#jack">Jack Murphy</a></p>
+                          <p class="post-date">20/01/2016</p>
+                       </div>
                     </div>
 
                     <div class="post-body-container">
@@ -188,7 +188,7 @@
                             <a href="https://twitter.com/eliascodes">
                                 <img src="./img/twitter_circle.svg" alt="twitter-logo"/>
                             </a>
-                            <a href="#">
+                            <a>
                                 <img src="./img/linkedin_circle.svg" alt="linkedin-logo"/>
                             </a>
                             <a href="http://www.codewars.com/users/em-12">
