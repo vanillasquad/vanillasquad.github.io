@@ -165,6 +165,9 @@ nav a:hover {
    float: left;
 }
 
+.cone:hover {
+}
+
 #cone-container:before {
    content: '';
    display: table;
@@ -177,34 +180,38 @@ nav a:hover {
 .cone-1 {
    animation: cone-down 2s ease;
    animation-fill-mode: forwards;
-   animation-delay: 1s;
+   animation-delay: 0s;
+   transform: translateY(-400px);
 }
 
 .cone-2 {
    animation: cone-up 2s ease;
    animation-fill-mode: forwards;
-   animation-delay: 1s;
+   animation-delay: 0.3s;
+   transform: translateY(-400px);
 }
 
 .cone-3 {
    animation: cone-up 2s ease;
    animation-fill-mode: forwards;
-   animation-delay: 1s;
+   animation-delay: 0.6s;
+   transform: translateY(-400px);
 }
 
 .cone-4 {
    animation: cone-down 2s ease;
    animation-fill-mode: forwards;
-   animation-delay: 1s;
+   animation-delay: 0.9s;
+   transform: translateY(-400px);
 }
 
 @keyframes cone-down {
-   0% {transform: translateY(0);}
+   0% {transform: translateY(-500px);}
    100% {transform: translateY(15px);}
 }
 
 @keyframes cone-up {
-   0% {transform: translateY(0);}
+   0% {transform: translateY(-500px);}
    100% {transform: translateY(-15px);}
 }
 
@@ -278,11 +285,10 @@ article {
     margin-top: 30px;
     padding: 10px 0;
     text-align: center;
-    background-color: rgba(251, 80, 77, 0.15);
-    color: #928C3E;
-    border: 2px solid #FB504D;
+    background-color: rgba(251, 80, 77, 1);
+    color: #fff;
     border-radius: 12px;
-    transition: color 0.3s linear, background-color 0.3s linear;
+    transition: color 0.3s linear, transform 0.3s linear;
 }
 
 .btn p {
@@ -291,8 +297,8 @@ article {
 }
 
 .btn:hover {
-    color: #fff;
-    background-color: rgba(251, 80, 77, 1);
+    color: #FFDC4F;
+    transform: scale(1.02, 1.02);
 }
 
 .expand {
@@ -313,7 +319,20 @@ article {
 #page-divider img.divider-cone {
   display: inline-block;
   margin: 0px auto;
-  width: 2em;
+  width: 2.5em;
+  transition: 0.3s ease;
+}
+
+.divider-cone-1:hover {
+   transform: translateY(-12px);
+}
+
+.divider-cone-2:hover {
+   transform: translateY(-12px);
+}
+
+.divider-cone-3:hover {
+   transform: translateY(-12px);
 }
 
 @media (max-device-width: 450px) {
@@ -444,3 +463,9 @@ footer a {
 footer a:hover {
     color: #ffdb5c;
 }
+
+.footer-cone {
+   display: inline-block;
+   /*float: left;*/
+   width: 2.5em;
+   margin: 10px;
