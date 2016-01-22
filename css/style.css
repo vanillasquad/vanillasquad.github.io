@@ -352,6 +352,9 @@ article {
         margin-top: 11px;
         font-size: 1em;
     }
+    .expand {
+        max-height: 1200px;
+    }
 }
 
 /* ------------------
