@@ -2,10 +2,10 @@ var buttons = document.getElementsByClassName('btn');
 
 for (var ii=0, len=buttons.length; ii<len; ii++) {
     buttons[ii].addEventListener('click', function() {
-        this.previousElementSibling.classList.toggle('expand');
-        this.previousElementSibling.getElementsByClassName('overlay')[0].classList.toggle('transparent');
-        this.firstElementChild.innerHTML = (this.firstElementChild.innerHTML === 'See More ...') ? 'Collapse Post' : 'See More ...';
-    });
+    this.previousElementSibling.classList.toggle('expand');
+    this.previousElementSibling.getElementsByClassName('overlay')[0].classList.toggle('transparent');
+    this.firstElementChild.innerHTML = (this.firstElementChild.innerHTML === 'See More ...') ? 'Collapse Post' : 'See More ...';
+});
 }
 
 
@@ -17,32 +17,32 @@ Allows for smooth scrolling when clicking links to move down the page
 */
 
 function currentYPosition() {
-  // Firefox, Chrome, Opera, Safari
-  if (self.pageYOffset) return self.pageYOffset;
-  // Internet Explorer 6 - standards mode
-  if (document.documentElement && document.documentElement.scrollTop)
-      return document.documentElement.scrollTop;
-  // Internet Explorer 6, 7 and 8
-  if (document.body.scrollTop) return document.body.scrollTop;
-  return 0;
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop)
+    return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
 }
 
 //finds endpoint by looking at parents' y value?
 function elmYPosition(eID) {
-  var elem = document.getElementById(eID);
-  var y = elem.offsetTop;
-  var node = elem;
-  while (node.offsetParent && node.offsetParent != document.body) {
+    var elem = document.getElementById(eID);
+    var y = elem.offsetTop;
+    var node = elem;
+    while (node.offsetParent && node.offsetParent != document.body) {
     node = node.offsetParent;
     y += node.offsetTop;
-  } return y;
+    } return y;
 }
 
 function smoothScroll(eID) {
     var startY = currentYPosition();
     var stopY = elmYPosition(eID) - document.querySelector('nav').offsetHeight;
     if(stopY){
-      stopY -= 20;
+        stopY -= 20;
     }
     //finds distance
     var distance = stopY > startY ? stopY - startY : startY - stopY;
