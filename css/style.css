@@ -237,6 +237,15 @@ Blog
     margin-top: 11vh;
 }
 
+#blog-container h1 {
+   margin-bottom: 1.5em;
+}
+
+#profile-container h1 {
+   margin-top: 3em;
+   margin-bottom: -2em;
+}
+
 article {
     margin-bottom: 75px;
 }
