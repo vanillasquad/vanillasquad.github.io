@@ -87,4 +87,15 @@ navLinks[1].addEventListener('click', function() {
 
 
 var katherine = document.querySelectorAll('.katherine-link');
-console.log(katherine);
+for (var i=0; i<katherine.length; i++) {
+    katherine[i].addEventListener('click', function() {
+        smoothScroll('katherine');
+    });
+}
+
+var jack = document.querySelectorAll('.jack-link');
+for (var i=0; i<jack.length; i++) {
+    jack[i].addEventListener('click', function() {
+        smoothScroll('jack');
+    });
+}
