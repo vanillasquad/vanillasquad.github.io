@@ -18,24 +18,30 @@ Allows for smooth scrolling when clicking links to move down the page
 
 function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
-    if (self.pageYOffset) return self.pageYOffset;
-    // Internet Explorer 6 - standards mode
-    if (document.documentElement && document.documentElement.scrollTop)
-    return document.documentElement.scrollTop;
+    if (window.pageYOffset) return window.pageYOffset;
     // Internet Explorer 6, 7 and 8
     if (document.body.scrollTop) return document.body.scrollTop;
     return 0;
 }
 
 //finds endpoint by looking at parents' y value?
+// function elmYPosition(eID) {
+//     var elem = document.getElementById(eID);
+//     var y = elem.offsetTop;
+//     // code below is unnecessary for 1 level of nesting
+//     // useful for multiple levels of nesting
+//     var node = elem;
+//     while (node.offsetParent && node.offsetParent != document.body) {
+//         console.log(node);
+//         node = node.offsetParent;
+//         y += node.offsetTop;
+//     }
+//     return y;
+// }
+
 function elmYPosition(eID) {
-    var elem = document.getElementById(eID);
-    var y = elem.offsetTop;
-    var node = elem;
-    while (node.offsetParent && node.offsetParent != document.body) {
-    node = node.offsetParent;
-    y += node.offsetTop;
-    } return y;
+    // return document.getElementById(eID).getBoundingClientRect().top;
+    return document.getElementById(eID).offsetTop;
 }
 
 function smoothScroll(eID) {
@@ -44,29 +50,35 @@ function smoothScroll(eID) {
     if(stopY){
         stopY -= 20;
     }
-    //finds distance
-    var distance = stopY > startY ? stopY - startY : startY - stopY;
-    //if close page will just 'jump'
+    //finds absolute distance
+    var distance = Math.abs(startY - stopY);
+    // if within 100px page will just 'jump'
     if (distance < 100) {
         scrollTo(0, stopY); return;
     }
     //calculate speed of scroll, maximum speed of 20
-    var speed = Math.round(distance / 100);
-    if (speed >= 20) speed = 20;
-    //??????
+    var delay = Math.round(distance / 100);
+    if (delay >= 20) delay = 20;
+
     var step = Math.round(distance / 25);
-    var leapY = stopY > startY ? startY + step : startY - step;
-    var timer = 0;
+    var screenPos = stopY > startY ? startY + step : startY - step;
+    var count = 0;
     if (stopY > startY) { //if scrolling down
-        for ( var i=startY; i<stopY; i+=step ) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-        } return;
-    }
+        for (var i=startY; i<stopY; i+=step) {
+            setTimeout("window.scrollTo(0, " + screenPos + ")", count * delay);
+            console.log(count);
+            screenPos += step;
+            if (screenPos > stopY) screenPos = stopY;
+            count++;
+        }
+    } else {
     //if scrolling up
-    for ( var i=startY; i>stopY; i-=step ) {
-        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        for (var i=startY; i>stopY; i-=step) {
+            setTimeout("window.scrollTo(0, " + screenPos+")", count * delay);
+            screenPos -= step;
+            if (screenPos < stopY) screenPos = stopY;
+            count++;
+        }
     }
 }
 
