@@ -235,6 +235,7 @@ Blog
 
 #blog-container {
     margin-top: 11vh;
+    position: relative;
 }
 
 #blog-container h1 {
@@ -265,6 +266,10 @@ article {
     max-height: 100px;
     overflow: hidden;
     transition: max-height 0.5s ease;
+}
+
+.expand {
+    max-height: 800px;
 }
 
 .overlay {
@@ -301,9 +306,6 @@ article {
     transform: scale(1.02, 1.02);
 }
 
-.expand {
-    max-height: 800px;
-}
 
 .transparent {
     opacity: 0;
@@ -349,6 +351,9 @@ article {
     .btn p {
         margin-top: 11px;
         font-size: 1em;
+    }
+    .expand {
+        max-height: 1200px;
     }
 }
 
