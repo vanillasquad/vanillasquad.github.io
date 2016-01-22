@@ -285,11 +285,10 @@ article {
     margin-top: 30px;
     padding: 10px 0;
     text-align: center;
-    background-color: rgba(251, 80, 77, 0.15);
-    color: #928C3E;
-    border: 2px solid #FB504D;
+    background-color: rgba(251, 80, 77, 1);
+    color: #fff;
     border-radius: 12px;
-    transition: color 0.3s linear, background-color 0.3s linear;
+    transition: color 0.3s linear, transform 0.3s linear;
 }
 
 .btn p {
@@ -298,8 +297,8 @@ article {
 }
 
 .btn:hover {
-    color: #fff;
-    background-color: rgba(251, 80, 77, 1);
+    color: #FFDC4F;
+    transform: scale(1.02, 1.02);
 }
 
 .expand {
