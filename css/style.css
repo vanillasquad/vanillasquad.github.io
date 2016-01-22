@@ -237,22 +237,12 @@ Blog
     margin-top: 11vh;
 }
 
-
 article {
     margin-bottom: 75px;
 }
 
 .title * {
     display: block;
-}
-
-.contributor .profile-card p {
-    display: block;
-    text-align: center;
-}
-
-.contributor {
-    float: left;
 }
 
 .title {
