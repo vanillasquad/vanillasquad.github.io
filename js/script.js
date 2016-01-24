@@ -32,32 +32,32 @@ function elmYPosition(eID) {
 function smoothScroll(eID) {
     var posStart = currentYPosition();
     var posTarget = elmYPosition(eID) - document.querySelector('nav').offsetHeight;
-    if(posTarget){
-        posTarget -= 20;
-    }
-    //finds absolute distance
+    if (posTarget) posTarget -= 20; // Custom padding
+
     var distance = Math.abs(posStart - posTarget);
-    // if within 100px page will just 'jump'
-    if (distance < 100) {
+
+    if (distance < 100) { // don't smooth scroll less than 100px
         scrollTo(0, posTarget);
         return;
     }
-    //calculate speed of scroll, maximum speed of 20
-    var delay = Math.max(20, Math.round(distance / 100));
 
-    var step = Math.round(distance / 25);
+    // Constant timeStep for simplicity
+    // posStep is the effective speed of the scroll
+    var timeStep = 10;
+    var posStep = Math.round(distance / 100);
+
     var isScrollingDown = posTarget > posStart;
     var posCurrent = posStart;
     var count = 0;
     if (isScrollingDown) {
         while (posCurrent < posTarget) {
-            posCurrent = Math.min(posTarget, posCurrent + step);
-            setTimeout(window.scrollTo, count++ * delay, 0, posCurrent);
+            posCurrent = Math.min(posTarget, posCurrent + posStep);
+            setTimeout(window.scrollTo, count++ * timeStep, 0, posCurrent);
         }
     } else {
-        for (var i=posStart; i>posTarget; i-=step) {
-            posCurrent = Math.max(posTarget, posCurrent - step);
-            setTimeout(window.scrollTo, count++ * delay, 0, posCurrent);
+        while (posCurrent > posTarget) {
+            posCurrent = Math.max(posTarget, posCurrent - posStep);
+            setTimeout(window.scrollTo, count++ * timeStep, 0, posCurrent);
         }
     }
 }
