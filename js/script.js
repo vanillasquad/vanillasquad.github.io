@@ -24,21 +24,6 @@ function currentYPosition() {
     return 0;
 }
 
-//finds endpoint by looking at parents' y value?
-// function elmYPosition(eID) {
-//     var elem = document.getElementById(eID);
-//     var y = elem.offsetTop;
-//     // code below is unnecessary for 1 level of nesting
-//     // useful for multiple levels of nesting
-//     var node = elem;
-//     while (node.offsetParent && node.offsetParent != document.body) {
-//         console.log(node);
-//         node = node.offsetParent;
-//         y += node.offsetTop;
-//     }
-//     return y;
-// }
-
 function elmYPosition(eID) {
     // return document.getElementById(eID).getBoundingClientRect().top;
     return document.getElementById(eID).offsetTop;
