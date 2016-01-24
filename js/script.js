@@ -50,8 +50,7 @@ function smoothScroll(eID) {
     var count = 0;
     if (stopY > startY) { //if scrolling down
         for (var i=startY; i<stopY; i+=step) {
-            setTimeout("window.scrollTo(0, " + screenPos + ")", count * delay);
-            console.log(count);
+            setTimeout(window.scrollTo, count * delay, 0, screenPos);
             screenPos += step;
             if (screenPos > stopY) screenPos = stopY;
             count++;
@@ -59,7 +58,7 @@ function smoothScroll(eID) {
     } else {
     //if scrolling up
         for (var i=startY; i>stopY; i-=step) {
-            setTimeout("window.scrollTo(0, " + screenPos+")", count * delay);
+            setTimeout(window.scrollTo, count * delay, 0, screenPos);
             screenPos -= step;
             if (screenPos < stopY) screenPos = stopY;
             count++;
