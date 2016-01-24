@@ -62,32 +62,26 @@ function smoothScroll(eID) {
     }
 }
 
+function getSmoothScrollClickHandler(id) {
+    return function () {
+        smoothScroll(id);
+    };
+}
+
 var home = document.querySelector('#logo a');
 var navLinks = document.querySelectorAll('#menu ul li a');
 
-home.addEventListener('click', function() {
-    smoothScroll('splash');
-});
+home.addEventListener('click', getSmoothScrollClickHandler('splash'));
 
-navLinks[0].addEventListener('click', function() {
-    smoothScroll('blog-container');
-});
-
-navLinks[1].addEventListener('click', function() {
-    smoothScroll('profile-container');
-});
-
+navLinks[0].addEventListener('click', getSmoothScrollClickHandler('blog-container'));
+navLinks[1].addEventListener('click', getSmoothScrollClickHandler('profile-container'));
 
 var katherine = document.querySelectorAll('.katherine-link');
 for (var i=0; i<katherine.length; i++) {
-    katherine[i].addEventListener('click', function() {
-        smoothScroll('katherine');
-    });
+    katherine[i].addEventListener('click', getSmoothScrollClickHandler('katherine'));
 }
 
 var jack = document.querySelectorAll('.jack-link');
 for (var i=0; i<jack.length; i++) {
-    jack[i].addEventListener('click', function() {
-        smoothScroll('jack');
-    });
+    jack[i].addEventListener('click', getSmoothScrollClickHandler('jack'));
 }
