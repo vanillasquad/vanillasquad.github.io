@@ -30,38 +30,34 @@ function elmYPosition(eID) {
 }
 
 function smoothScroll(eID) {
-    var startY = currentYPosition();
-    var stopY = elmYPosition(eID) - document.querySelector('nav').offsetHeight;
-    if(stopY){
-        stopY -= 20;
+    var posStart = currentYPosition();
+    var posTarget = elmYPosition(eID) - document.querySelector('nav').offsetHeight;
+    if(posTarget){
+        posTarget -= 20;
     }
     //finds absolute distance
-    var distance = Math.abs(startY - stopY);
+    var distance = Math.abs(posStart - posTarget);
     // if within 100px page will just 'jump'
     if (distance < 100) {
-        scrollTo(0, stopY); return;
+        scrollTo(0, posTarget);
+        return;
     }
     //calculate speed of scroll, maximum speed of 20
-    var delay = Math.round(distance / 100);
-    if (delay >= 20) delay = 20;
+    var delay = Math.max(20, Math.round(distance / 100));
 
     var step = Math.round(distance / 25);
-    var screenPos = stopY > startY ? startY + step : startY - step;
+    var isScrollingDown = posTarget > posStart;
+    var posCurrent = posStart;
     var count = 0;
-    if (stopY > startY) { //if scrolling down
-        for (var i=startY; i<stopY; i+=step) {
-            setTimeout(window.scrollTo, count * delay, 0, screenPos);
-            screenPos += step;
-            if (screenPos > stopY) screenPos = stopY;
-            count++;
+    if (isScrollingDown) {
+        while (posCurrent < posTarget) {
+            posCurrent = Math.min(posTarget, posCurrent + step);
+            setTimeout(window.scrollTo, count++ * delay, 0, posCurrent);
         }
     } else {
-    //if scrolling up
-        for (var i=startY; i>stopY; i-=step) {
-            setTimeout(window.scrollTo, count * delay, 0, screenPos);
-            screenPos -= step;
-            if (screenPos < stopY) screenPos = stopY;
-            count++;
+        for (var i=posStart; i>posTarget; i-=step) {
+            posCurrent = Math.max(posTarget, posCurrent - step);
+            setTimeout(window.scrollTo, count++ * delay, 0, posCurrent);
         }
     }
 }
