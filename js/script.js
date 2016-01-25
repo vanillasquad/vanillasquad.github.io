@@ -24,90 +24,63 @@ function currentYPosition() {
     return 0;
 }
 
-//finds endpoint by looking at parents' y value?
-// function elmYPosition(eID) {
-//     var elem = document.getElementById(eID);
-//     var y = elem.offsetTop;
-//     // code below is unnecessary for 1 level of nesting
-//     // useful for multiple levels of nesting
-//     var node = elem;
-//     while (node.offsetParent && node.offsetParent != document.body) {
-//         console.log(node);
-//         node = node.offsetParent;
-//         y += node.offsetTop;
-//     }
-//     return y;
-// }
-
 function elmYPosition(eID) {
-    // return document.getElementById(eID).getBoundingClientRect().top;
     return document.getElementById(eID).offsetTop;
 }
 
 function smoothScroll(eID) {
-    var startY = currentYPosition();
-    var stopY = elmYPosition(eID) - document.querySelector('nav').offsetHeight;
-    if(stopY){
-        stopY -= 20;
-    }
-    //finds absolute distance
-    var distance = Math.abs(startY - stopY);
-    // if within 100px page will just 'jump'
-    if (distance < 100) {
-        scrollTo(0, stopY); return;
-    }
-    //calculate speed of scroll, maximum speed of 20
-    var delay = Math.round(distance / 100);
-    if (delay >= 20) delay = 20;
+    var posStart = currentYPosition();
+    var posTarget = elmYPosition(eID) - document.querySelector('nav').offsetHeight;
+    if (posTarget) posTarget -= 20; // Custom padding
 
-    var step = Math.round(distance / 25);
-    var screenPos = stopY > startY ? startY + step : startY - step;
+    var distance = Math.abs(posStart - posTarget);
+
+    if (distance < 100) { // don't smooth scroll less than 100px
+        scrollTo(0, posTarget);
+        return;
+    }
+
+    // Constant timeStep for simplicity
+    // posStep is the effective speed of the scroll
+    var timeStep = 10;
+    var posStep = Math.round(distance / 100);
+
+    var isScrollingDown = posTarget > posStart;
+    var posCurrent = posStart;
     var count = 0;
-    if (stopY > startY) { //if scrolling down
-        for (var i=startY; i<stopY; i+=step) {
-            setTimeout("window.scrollTo(0, " + screenPos + ")", count * delay);
-            console.log(count);
-            screenPos += step;
-            if (screenPos > stopY) screenPos = stopY;
-            count++;
+    if (isScrollingDown) {
+        while (posCurrent < posTarget) {
+            posCurrent = Math.min(posTarget, posCurrent + posStep);
+            setTimeout(window.scrollTo, count++ * timeStep, 0, posCurrent);
         }
     } else {
-    //if scrolling up
-        for (var i=startY; i>stopY; i-=step) {
-            setTimeout("window.scrollTo(0, " + screenPos+")", count * delay);
-            screenPos -= step;
-            if (screenPos < stopY) screenPos = stopY;
-            count++;
+        while (posCurrent > posTarget) {
+            posCurrent = Math.max(posTarget, posCurrent - posStep);
+            setTimeout(window.scrollTo, count++ * timeStep, 0, posCurrent);
         }
     }
+}
+
+function getSmoothScrollClickHandler(id) {
+    return function () {
+        smoothScroll(id);
+    };
 }
 
 var home = document.querySelector('#logo a');
 var navLinks = document.querySelectorAll('#menu ul li a');
 
-home.addEventListener('click', function() {
-    smoothScroll('splash');
-});
+home.addEventListener('click', getSmoothScrollClickHandler('splash'));
 
-navLinks[0].addEventListener('click', function() {
-    smoothScroll('blog-container');
-});
-
-navLinks[1].addEventListener('click', function() {
-    smoothScroll('profile-container');
-});
-
+navLinks[0].addEventListener('click', getSmoothScrollClickHandler('blog-container'));
+navLinks[1].addEventListener('click', getSmoothScrollClickHandler('profile-container'));
 
 var katherine = document.querySelectorAll('.katherine-link');
 for (var i=0; i<katherine.length; i++) {
-    katherine[i].addEventListener('click', function() {
-        smoothScroll('katherine');
-    });
+    katherine[i].addEventListener('click', getSmoothScrollClickHandler('katherine'));
 }
 
 var jack = document.querySelectorAll('.jack-link');
 for (var i=0; i<jack.length; i++) {
-    jack[i].addEventListener('click', function() {
-        smoothScroll('jack');
-    });
+    jack[i].addEventListener('click', getSmoothScrollClickHandler('jack'));
 }
