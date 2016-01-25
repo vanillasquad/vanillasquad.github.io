@@ -25,7 +25,6 @@ function currentYPosition() {
 }
 
 function elmYPosition(eID) {
-    // return document.getElementById(eID).getBoundingClientRect().top;
     return document.getElementById(eID).offsetTop;
 }
 
