@@ -2,7 +2,7 @@
 
 Vanilla Squad is a team enrolled at the 4-month long [Founders & Coders](http://www.foundersandcoders.com/) course. We are in the seventh cohort (FAC7), running from January to May 2016.
 
-Check [our blog](http://vanillasquad.github.io/blog/) for updates on Vanilla Squad. You can find out what we are doing during FAC7, personal stories, projects, and information. Each of us can be contacted individually through the profile section.
+Check [our blog](http://vanillasquad.github.io) for updates on Vanilla Squad. You can find out what we are doing during FAC7, personal stories, projects, and information. Each of us can be contacted individually through the profile section.
 
 ## Features
 
